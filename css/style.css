@@ -1,0 +1,25 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background: blue;
+}
+.all{
+    padding: 0px;
+    margin: 0px;
+    background:  red;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/another/Sukno_dlja_pokernogo_stola_kriptonit.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 120%;
+}
+.my_col{
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    z-index: 1001;
+    
+}
