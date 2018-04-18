@@ -1,0 +1,45 @@
+var mas = [];
+var mas1 = [];
+for(var i = 1; i <= 52; i++){
+  mas[i] = i;
+}
+var i = 0;
+var j = 0;
+while( i < 9){
+  var num = Math.floor(Math.random() * (52 - 1 + 1)) + 1;
+  if(mas[num] != 0){
+    mas1[i] = mas[num];
+    mas[num] = 0;
+    //console.log(mas1[i]);
+    i++;
+    
+  }
+  j++;
+}
+console.log(mas1);
+console.log(i);
+console.log(j);
+
+function compareNumeric(a, b) {
+  if (a > b) return 1;
+  if (a < b) return -1;
+}
+
+var arr = [ 1, 2, 15 ];
+
+mas1.sort(compareNumeric);
+
+console.log(mas1); 
+var kil = 0;
+for(var i = 0; i < 5; i++){
+  var j = i + 1; 
+  console.log(i + " " + j);
+  if((mas1[j] - mas1[i]) == 1){
+    kil++;
+    console.log(kil);
+  }
+}
+if(kil == 5){
+  console.log("strit");
+}
+
