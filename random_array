@@ -1,0 +1,25 @@
+var mas = [];
+var mas1 = [];
+for(var i = 1; i <= 52; i++){
+  mas[i] = i;
+}
+var i = 0;
+var j = 0;
+while( i < 20){
+  var num = Math.floor(Math.random() * (52 - 1 + 1)) + 1;
+  if(mas[num] != 0){
+    mas1[i] = mas[num];
+    mas[num] = 0;
+    //console.log(mas1[i]);
+    i++;
+    
+  }
+  j++;
+}
+console.log(mas1);
+console.log(i);
+console.log(j);
+
+
+
+
