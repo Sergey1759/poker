@@ -1,0 +1,231 @@
+function card(id , title , lear , src_image){
+    this.id        = id,
+    this.title     = title,
+    this.lear      = lear,
+    this.src_image = src_image
+};
+
+
+ card.prototype.show_card = function show(card){
+    //console.log(this.id + ' ' + this.title + ' ' + this.lear + ' ' + this.src_image)
+     var col = document.createElement('div');
+     col.className = " col my_col col-xl-2 col-lg-2";
+     col.style.backgroundImage = "../img/kart/J_B.png";
+     var all = document.getElementsByClassName('all');
+    all[0].appendChild(col);
+    // document.body.appendChild(col);
+     console.log(this.src_image);
+}
+ 
+  card.prototype.rotate_show = function rotate_show(card){
+     var kart = document.getElementsByClassName('col');
+      kart.className = " rotate_show ";
+      kart.style.backgroundImage = "url('../img/kart/J_B.png')";
+}
+  
+  card.prototype.console_show = function console_show(card){
+     console.log('id = ' + this.id + ' title = ' + this.title + ' mast = ' + this.lear);
+}
+  
+ 
+var koloda = [                      
+  card1 =   new card('1','2','bubna','../img/kart/J_B.png'),
+  card2 =   new card('2','2','hrest','../img/kart/J_B.png'),
+  card3 =   new card('3','2','cherv','../img/kart/J_B.png'),
+  card4 =   new card('4','2','picka','../img/kart/J_B.png'),
+    
+  card5 =   new card('5','3','bubna','../img/kart/J_B.png'),
+  card6 =   new card('6','3','hrest','../img/kart/J_B.png'),
+  card7 =   new card('7','3','cherv','../img/kart/J_B.png'),
+  card8 =   new card('8','3','picka','../img/kart/J_B.png'),
+    
+  card9 =   new card('9' ,'4','bubna','../img/kart/J_B.png'),
+  card10 =  new card('10','4','hrest','../img/kart/J_B.png'),
+  card11 =  new card('11','4','cherv','../img/kart/J_B.png'),
+  card12 =  new card('12','4','picka','../img/kart/J_B.png'),
+    
+  card13 = new card('13','5','bubna','../img/kart/J_B.png'),
+  card14 = new card('14','5','hrest','../img/kart/J_B.png'),
+  card15 = new card('15','5','cherv','../img/kart/J_B.png'),
+  card16 = new card('16','5','picka','../img/kart/J_B.png'),
+    
+  card17 = new card('17','6','bubna','../img/kart/J_B.png'),
+  card18 = new card('18','6','hrest','../img/kart/J_B.png'),
+  card19 = new card('19','6','cherv','../img/kart/J_B.png'),
+  card20 = new card('20','6','picka','../img/kart/J_B.png'),
+    
+  card21 = new card('21','7','bubna','../img/kart/J_B.png'),
+  card22 = new card('22','7','hrest','../img/kart/J_B.png'),
+  card23 = new card('23','7','cherv','../img/kart/J_B.png'),
+  card24 = new card('24','7','picka','../img/kart/J_B.png'),
+    
+  card25 = new card('25','8','bubna','../img/kart/J_B.png'),
+  card26 = new card('26','8','hrest','../img/kart/J_B.png'),
+  card27 = new card('27','8','cherv','../img/kart/J_B.png'),
+  card28 = new card('28','8','picka','../img/kart/J_B.png'),
+    
+  card29 = new card('29','9','bubna','../img/kart/J_B.png'),
+  card30 = new card('30','9','hrest','../img/kart/J_B.png'),
+  card31 = new card('31','9','cherv','../img/kart/J_B.png'),
+  card32 = new card('32','9','picka','../img/kart/J_B.png'),
+    
+  card33 = new card('33','10','bubna','../img/kart/J_B.png'),
+  card34 = new card('34','10','hrest','../img/kart/J_B.png'),
+  card35 = new card('35','10','cherv','../img/kart/J_B.png'),
+  card36 = new card('36','10','picka','../img/kart/J_B.png')  ,
+    
+  card37 = new card('37','v','bubna','../img/kart/J_B.png'),
+  card38 = new card('38','v','hrest','../img/kart/J_B.png'),
+  card39 = new card('39','v','cherv','../img/kart/J_B.png'),
+  card40 = new card('40','v','picka','../img/kart/J_B.png'),
+    
+  card41 = new card('41','d','bubna','../img/kart/J_B.png'),
+  card42 = new card('42','d','hrest','../img/kart/J_B.png'),
+  card43 = new card('43','d','cherv','../img/kart/J_B.png'),
+  card44 = new card('44','d','picka','../img/kart/J_B.png'),
+    
+  card45 = new card('45','k','bubna','../img/kart/J_B.png'),
+  card46 = new card('46','k','hrest','../img/kart/J_B.png'),
+  card47 = new card('47','k','cherv','../img/kart/J_B.png'),
+  card48 = new card('48','k','picka','../img/kart/J_B.png'),
+    
+  card49 = new card('49','a','bubna','../img/kart/J_B.png'),
+  card50 = new card('50','a','hrest','../img/kart/J_B.png'),
+  card51 = new card('51','a','cherv','../img/kart/J_B.png'),
+  card52 = new card('52','a','picka','../img/kart/J_B.png')
+]
+
+
+
+
+  
+   
+var mas = [];
+var mas1 = [];
+
+for(var i = 1; i <= 52; i++){
+  mas[i] = i;
+}
+
+var i = 0;
+while( i < 9){
+  var num = Math.floor(Math.random() * (52 - 1 + 1)) + 1;
+  if(mas[num] != 0){
+    mas1[i] = mas[num];
+    mas[num] = 0;
+    i++; 
+  }}
+
+console.log(mas1);
+
+
+function flesh(obj){    
+    var bubna = 0;
+    var hrest = 0;
+    var cherv = 0;
+    var picka = 0;
+    var flesh_Array = [];
+    
+    for(key in obj){
+        num = 0;
+        if(obj[key].lear == 'bubna'){
+        bubna +=1
+        }
+        if(obj[key].lear == 'hrest'){
+        hrest += 1;
+        }
+        if(obj[key].lear == 'cherv'){
+        cherv += 1;
+        }
+        if(obj[key].lear == 'picka'){
+        picka += 1;
+        }
+    }
+    flesh_Array[0] = bubna;
+    flesh_Array[1] = hrest;
+    flesh_Array[2] = cherv;
+    flesh_Array[3] = picka;
+    
+    for(var i = 0; i < flesh_Array.length; i++){
+    if(flesh_Array[i] >= 5){
+       console.log('flesh')
+       }}
+    console.log(flesh_Array);
+}
+
+
+
+function other(obj){ 
+var k2 = 0,k3 = 0,k4 = 0,k5 = 0,k6 = 0,k7 = 0,k8 = 0,k9 = 0, k10 = 0,v =0,d = 0,k=0,a=0;
+    var other_array = [];
+    for(key in obj){
+       switch (obj[key].title){
+            case '2':  k2 +=1 ;    break; 
+            case '3':  k3 +=1 ;    break; 
+            case '4' : k4 +=1 ;    break; 
+            case '5' : k5 +=1 ;    break; 
+            case '6' : k6 +=1 ;    break; 
+            case '7' : k7 +=1 ;    break; 
+            case '8' : k8 +=1 ;    break; 
+            case '9' : k9 +=1 ;    break; 
+            case '10': k10 +=1;    break; 
+            case 'v' : v +=1  ;    break; 
+            case 'd' : d +=1  ;    break; 
+            case 'k' : k +=1  ;    break; 
+            case 'a' : a +=1  ;    break; 
+  
+  
+}console.log(obj[key].title);
+    }
+other_array[0] = k2;
+other_array[1] = k3;
+other_array[2] = k4;
+other_array[3] = k5;
+other_array[4] = k6;
+other_array[5] = k7;
+other_array[6] = k8;
+other_array[7] = k9;
+other_array[8] = k10;
+other_array[9] = v;
+other_array[10] = d;
+other_array[11] = k;
+other_array[12] = a;
+console.log(other_array);
+    
+    for(var i=0;i<other_array.length;i++){
+        if(other_array[i] == 2){
+         console.log("para" + i)   
+        }  
+        if(other_array[i] == 3){
+         console.log("set" + i)   
+        }
+        if(other_array[i] == 4){
+         console.log("kare" + i)   
+        }
+    };
+}
+
+
+
+
+var seven_kart = [{},{},{},{},{},{},{},{},{}];
+
+for(key in koloda){  
+ for(var i = 0; i < mas1.length; i++){
+        if(koloda[key].id == mas1[i]){
+    koloda[key].console_show();
+    koloda[key].show_card();
+    koloda[key].rotate_show();
+    
+            
+     seven_kart[i].id = koloda[key].id; 
+     seven_kart[i].title = koloda[key].title; 
+     seven_kart[i].lear = koloda[key].lear; 
+     seven_kart[i].src = koloda[key].src_image; 
+     
+    }
+}}
+
+flesh(seven_kart);
+other(seven_kart);
+console.log(seven_kart);
